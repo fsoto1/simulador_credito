@@ -1,0 +1,6 @@
+cl\testing\simulador\controlador\SimuladorController.class
+cl\testing\simulador\modelo\SolicitudDAO.class
+cl\testing\simulador\entidades\Solicitud.class
+cl\testing\simulador\common\Simulador.class
+cl\testing\simulador\common\Validador.class
+cl\testing\simulador\modelo\ServicioException.class

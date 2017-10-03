@@ -5,6 +5,10 @@
  */
 package cl.testing.simulador.common;
 
+import java.time.Instant;
+import java.util.Calendar;
+import java.util.Date;
+
 /**
  *
  * @author Franco
@@ -35,16 +39,33 @@ public class Validador {
         return validacion;
     }
     public boolean validaMonto(int monto){
-        if (monto >= 506540 && monto <= 39990000) {
-            return true;
-        }
-        return false;
+        return monto >= 506540 && monto <= 39990000;
     }
 
-    public boolean validaCuota(int couta) {
-        if (couta >= 12 && couta <= 60) {
-            return true;
-        }
-        return false;
+    public boolean validaCuota(int cuota) {
+        return cuota >= 12 && cuota <= 60;
+    }
+    
+    public boolean validaFechaPrimerVencimiento(Date fecha) {
+        Date hoy = new Date();
+        int dias_min, dias_max;
+        Calendar calendar_min, calendar_max ;
+        dias_min = 27;
+        dias_max = 92;        
+        calendar_min =  Calendar.getInstance();
+        calendar_max = Calendar.getInstance();
+        calendar_min.setTime(hoy);            
+        calendar_min.add(Calendar.DAY_OF_YEAR, dias_min);
+        calendar_max.setTime(hoy);            
+        calendar_max.add(Calendar.DAY_OF_YEAR, dias_max);
+        return fecha.after(calendar_min.getTime()) && fecha.before(calendar_max.getTime());
+    }
+    
+    public boolean validaSeguro(String seguro) {
+        return seguro.equals("protegido") || seguro.equals("desgravemen");
+    }
+    
+    public boolean validaCaptcha(boolean captcha) {
+        return captcha;
     }
 }
