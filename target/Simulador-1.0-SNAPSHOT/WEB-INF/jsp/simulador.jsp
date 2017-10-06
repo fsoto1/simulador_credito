@@ -26,19 +26,19 @@
                             <form action="simulador.htm" method="post">
                             <div class="form-group">
                                 <label>Rut</label>
-                                <input type="text" class="form-control" id="rut" name="rut" placeholder="Ej. 12345678-k">
+                                <input type="text" class="form-control" id="rut" name="rut" placeholder="Ej. 12345678-k" required>
                             </div>
                             <div class="form-group">
                                 <label>Monto Solicitado</label>
-                                <input type="number" class="form-control" id="monto" name="monto"  placeholder="Desde $506502">
+                                <input type="number" class="form-control" id="monto" name="monto"  placeholder="Desde $506502" required>
                             </div>
                             <div class="form-group">
                                 <label>Plazo cuotas</label>
-                                <input type="number" class="form-control" id="cuotas" name="cuotas" placeholder="Entre 12 - 60 cuotas">
+                                <input type="number" class="form-control" id="cuotas" name="cuotas" placeholder="Entre 12 - 60 cuotas" required>
                             </div>
                             <div class="form-group">
                                 <label>Primer Vencimiento</label>
-                                <input type="date" class="form-control" id="vencimiento" name="vencimiento" placeholder="DD-MM-YYYY">
+                                <input type="date" class="form-control" id="vencimiento" name="vencimiento" placeholder="DD-MM-YYYY" required>
                             </div>
                             <label>Seguros que deseas incluir</label>
                             <div class="form-check form-check-inline">                                
@@ -63,7 +63,6 @@
             </div>
         </div>
         </div>
-        
     </body>
     <script>
         var Fn = {

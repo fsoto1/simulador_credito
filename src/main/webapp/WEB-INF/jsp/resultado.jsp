@@ -1,6 +1,6 @@
 <%-- 
-    Document   : error
-    Created on : 02-oct-2017, 1:05:42
+    Document   : resultado
+    Created on : 02-oct-2017, 21:23:23
     Author     : Franco
 --%>
 
@@ -9,25 +9,23 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Error</title>
+        <title>Resultado</title>
         <jsp:include page="common/bootstrap.jsp"/>
     </head>
     <body>
         
-        
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">                    
-                    <div class="alert alert-danger" role="alert">
+                    <div class="alert alert-success" role="alert">
                         <br>
-                        <h1>Ha ocurrido un error</h1>
+                        <h4>Resultado de Simulación</h4>
                         <hr>
-                        <h4>${requestScope.error}</h4>
+                        <h1>${requestScope.simulador}</h1>
                         
                     </div>  
             </div>
         </div>
         </div>
-        
     </body>
 </html>

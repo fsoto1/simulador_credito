@@ -24,6 +24,7 @@
 
     <mvc:view-controller path="/simulador.htm" view-name="simulador"/>
     <mvc:view-controller path="/error.htm" view-name="error"/>
+    <mvc:view-controller path="/resultado.htm" view-name="resultado"/>
     <!--
     Most controllers will use the ControllerClassNameHandlerMapping above, but
     for the index controller we are using ParameterizableViewController, so we must
