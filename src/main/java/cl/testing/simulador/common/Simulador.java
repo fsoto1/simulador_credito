@@ -12,18 +12,14 @@ import java.util.Date;
  * @author Franco
  */
 public class Simulador {
-    private String rut;
-    private int monto =555012;
-    private int cuotas = 	12;
-    private Date fechaVencimiento;
-    private String seguro;
-    private double interesMensual =0.0119;
-    private double valorCuota;
     
-    public double calcular(){
-        valorCuota = (monto/((1/interesMensual)*(1-1/Math.pow(1+interesMensual,cuotas))));
-        return valorCuota;
+    public int calcular(int monto, int cuotas, double interesMensual){
+        return (int)(monto/((1/(interesMensual/100))*(1-1/Math.pow(1+(interesMensual/100),cuotas))));
     }
     
+    
+    public double tasaAnual(double interesMensual){
+        return interesMensual*12;
+    }
     
 }

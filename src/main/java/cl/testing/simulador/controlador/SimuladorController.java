@@ -37,17 +37,14 @@ public class SimuladorController {
             Model model){
         Validador val = new Validador();
         Simulador simulador = new Simulador();
-        String mensaje = null;
-        
-        /*MENSAJES*/
-        System.out.println("rut "+ rut);
-        System.out.println("monto "+monto);
-        System.out.println("cuotas "+cuotas);
-        System.out.println("vencimiento "+vencimiento);
-        System.out.println("seguro "+seguro);
-        
-
-        /*MENSAJES*/
+        String mensaje;
+        double interesMensual = 1.02;
+        int impuesto = 16000;
+        int notario = 700;
+        int ctc;
+        int precioSeguro;
+        int valorCuota;
+        Date hoy = new Date();
         try{
             if(rut.trim().equals("") || vencimiento.trim().equals("") || vencimiento.equals("vencimiento") || seguro.trim().equals("") || monto.trim().equals("") || cuotas.trim().equals("")){
                 mensaje = "Campos vacios";
@@ -57,8 +54,9 @@ public class SimuladorController {
             int cuotasInt = Integer.parseInt(cuotas);
             int montoInt = Integer.parseInt(monto);
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+            SimpleDateFormat dmyFormat = new SimpleDateFormat("dd-MM-yyyy");
+            SimpleDateFormat dmyhmsFormat = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
             Date fecha = format.parse(vencimiento);
-            System.out.println("try");
             if(!val.validaRut(rut)){
                 System.out.println("RUT");
                 mensaje = "Rut inválido";
@@ -73,17 +71,33 @@ public class SimuladorController {
                 model.addAttribute("error",mensaje);
                 return "error";
             } else if(!val.validaFechaPrimerVencimiento(fecha)){
-                System.out.println(fecha);
                 mensaje = "Fecha inválida";
                 model.addAttribute("error",mensaje);
                 return "error";
-            }else if(!val.validaSeguro(seguro)){
-                mensaje = "Seguro inválido";
-                model.addAttribute("error",mensaje);
-                return "error";
             }else{
-                double sim = simulador.calcular();
-                model.addAttribute("simulador",sim);
+                if (seguro.equals("protegido")) {
+                    precioSeguro = 70000;  
+                }else if (seguro.equals("desgravemen")) {
+                    precioSeguro = 50000;
+                }else{
+                    precioSeguro = 0;
+                } 
+                valorCuota = simulador.calcular(montoInt, cuotasInt, interesMensual);
+                ctc = valorCuota*12;
+                model.addAttribute("hoy",dmyhmsFormat.format(hoy));
+                model.addAttribute("rut",rut);
+                model.addAttribute("monto",montoInt);
+                model.addAttribute("cuotas",cuotasInt);
+                model.addAttribute("fecha",dmyFormat.format(fecha));
+                model.addAttribute("seguro",seguro);
+                model.addAttribute("precioSeguro",precioSeguro);
+                model.addAttribute("interesMensual",interesMensual);
+                model.addAttribute("interesAnual",simulador.tasaAnual(interesMensual));
+                model.addAttribute("impuesto",impuesto);
+                model.addAttribute("notario",notario);
+                model.addAttribute("mtc",montoInt+precioSeguro+notario+impuesto);
+                model.addAttribute("ctc",ctc);
+                model.addAttribute("valorCuota",valorCuota);
                 return "resultado";
             }
         }catch(Exception e){
