@@ -45,6 +45,11 @@ public class SimuladorController {
         int precioSeguro;
         int valorCuota;
         Date hoy = new Date();
+        System.out.println(rut);
+        System.out.println(monto);
+        System.out.println(cuotas);
+        System.out.println(vencimiento);
+        System.out.println(seguro);
         try{
             if(rut.trim().equals("") || vencimiento.trim().equals("") || vencimiento.equals("vencimiento") || seguro.trim().equals("") || monto.trim().equals("") || cuotas.trim().equals("")){
                 mensaje = "Campos vacios";
@@ -58,7 +63,6 @@ public class SimuladorController {
             SimpleDateFormat dmyhmsFormat = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
             Date fecha = format.parse(vencimiento);
             if(!val.validaRut(rut)){
-                System.out.println("RUT");
                 mensaje = "Rut inválido";
                 model.addAttribute("error",mensaje);
                 return "error";

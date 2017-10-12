@@ -40,7 +40,9 @@ public class ValidadorTest {
     }
 
     /**
-     * Test of validaRut method, of class Validador.
+     * Test del método validaRut
+     * Valida el mínimo rut falso
+     * Caso de prueba cp_val_rut01
      */
     @Test
     public void testValidaRut1() {
@@ -49,9 +51,14 @@ public class ValidadorTest {
         Validador instance = new Validador();
         boolean expResult = false;
         boolean result = instance.validaRut(rut);
-        assertEquals(expResult, result);
+        assertEquals("El rut 99.999-9 debe ser falso",expResult, result);
     }
     
+    /**
+     * Test del método validaRut
+     * Valida el máximo rut falso
+     * Caso de prueba cp_val_rut02
+     */
     @Test
     public void testValidaRut2() {
         System.out.println("validaRut2");
@@ -59,9 +66,14 @@ public class ValidadorTest {
         Validador instance = new Validador();
         boolean expResult = false;
         boolean result = instance.validaRut(rut);
-        assertEquals(expResult, result);
+        assertEquals("El rut 10.000.000.000-0 debe ser falso",expResult, result);
     }
     
+    /**
+     * Test del método validaRut
+     * Valida el mínimo rut verdadero
+     * Caso de prueba cp_val_rut03
+     */
     @Test
     public void testValidaRut3() {
         System.out.println("validaRut3");
@@ -69,9 +81,14 @@ public class ValidadorTest {
         Validador instance = new Validador();
         boolean expResult = true;
         boolean result = instance.validaRut(rut);
-        assertEquals(expResult, result);
+        assertEquals("El rut 000.000-0 debe ser verdadero",expResult, result);
     }
     
+    /**
+     * Test del método validaRut
+     * Valida el máximo rut verdadero
+     * Caso de prueba cp_val_rut04
+     */
     @Test
     public void testValidaRut4() {
         System.out.println("validaRut4");
@@ -79,9 +96,14 @@ public class ValidadorTest {
         Validador instance = new Validador();
         boolean expResult = true;
         boolean result = instance.validaRut(rut);
-        assertEquals(expResult, result);
+        assertEquals("El rut 99.999.999-9 debe ser verdadero",expResult, result);
     }
     
+    /**
+     * Test del método validaMonto
+     * Valida el minimo monto falso
+     * Caso de prueba cp_val_mon01
+     */    
     @Test
     public void testValidaMonto1() {
         System.out.println("validaMonto1");
@@ -89,9 +111,14 @@ public class ValidadorTest {
         Validador instance = new Validador();
         boolean expResult = false;
         boolean result = instance.validaMonto(monto);
-        assertEquals(expResult, result);
+        assertEquals("El monto 506539 debe ser falso",expResult, result);
     }
     
+    /**
+     * Test del método validaMonto
+     * Valida el máximo monto falso
+     * Caso de prueba cp_val_mon02
+     */ 
     @Test
     public void testValidaMonto2() {
         System.out.println("validaMonto2");
@@ -99,9 +126,14 @@ public class ValidadorTest {
         Validador instance = new Validador();
         boolean expResult = false;
         boolean result = instance.validaMonto(monto);
-        assertEquals(expResult, result);
+        assertEquals("El monto 39990001 debe ser falso",expResult, result);
     }
     
+    /**
+     * Test del método validaMonto
+     * Valida el minimo monto verdadero
+     * Caso de prueba cp_val_mon03
+     */ 
     @Test
     public void testValidaMonto3() {
         System.out.println("validaMonto3");
@@ -109,9 +141,14 @@ public class ValidadorTest {
         Validador instance = new Validador();
         boolean expResult = true;
         boolean result = instance.validaMonto(monto);
-        assertEquals(expResult, result);
+        assertEquals("El monto 506540 debe ser verdadero",expResult, result);
     }
     
+    /**
+     * Test del método validaMonto
+     * Valida el maximo monto verdadero
+     * Caso de prueba cp_val_mon04
+     */ 
     @Test
     public void testValidaMonto4() {
         System.out.println("validaMonto4");
@@ -119,9 +156,14 @@ public class ValidadorTest {
         Validador instance = new Validador();
         boolean expResult = true;
         boolean result = instance.validaMonto(monto);
-        assertEquals(expResult, result);
+        assertEquals("El monto 39990000 debe ser verdadero",expResult, result);
     }
     
+    /**
+     * Test del método validaCuota
+     * Valida la minima cuota falsa
+     * Caso de prueba cp_val_pct01
+     */ 
     @Test
     public void testValidaCuota1() {
         System.out.println("validaCuota1");
@@ -129,9 +171,14 @@ public class ValidadorTest {
         Validador instance = new Validador();
         boolean expResult = false;
         boolean result = instance.validaCuota(cuota);
-        assertEquals(expResult, result);
+        assertEquals("El numero de cuotas 11 debe ser falso",expResult, result);
     }
     
+    /**
+     * Test del método validaCuota
+     * Valida la maxima cuota falsa
+     * Caso de prueba cp_val_pct02
+     */ 
     @Test
     public void testValidaCuota2() {
         System.out.println("validaCuota2");
@@ -139,9 +186,14 @@ public class ValidadorTest {
         Validador instance = new Validador();
         boolean expResult = false;
         boolean result = instance.validaCuota(cuota);
-        assertEquals(expResult, result);
+        assertEquals("El numero de cuotas 61 debe ser falso",expResult, result);
     }
     
+    /**
+     * Test del método validaCuota
+     * Valida la minima cuota verdadera
+     * Caso de prueba cp_val_pct03
+     */ 
     @Test
     public void testValidaCuota3() {
         System.out.println("validaCuota3");
@@ -149,9 +201,14 @@ public class ValidadorTest {
         Validador instance = new Validador();
         boolean expResult = true;
         boolean result = instance.validaCuota(cuota);
-        assertEquals(expResult, result);
+        assertEquals("El numero de cuotas 12 debe ser verdadero",expResult, result);
     }
     
+    /**
+     * Test del método validaCuota
+     * Valida la maxima cuota verdadera
+     * Caso de prueba cp_val_pct04
+     */ 
     @Test
     public void testValidaCuota4() {
         System.out.println("validaCuota4");
@@ -159,9 +216,14 @@ public class ValidadorTest {
         Validador instance = new Validador();
         boolean expResult = true;
         boolean result = instance.validaCuota(cuota);
-        assertEquals(expResult, result);
+        assertEquals("El numero de cuotas 60 debe ser verdadero",expResult, result);
     }
     
+    /**
+     * Test del método validaFechaPrimerVencimiento
+     * Valida la minima fecha de primer vencimiento falsa
+     * Caso de prueba cp_val_fpv01
+     */ 
     @Test
     public void testValidaFechaPrimerVencimiento1() {
         System.out.println("validaFechaPrimerVencimiento1");
@@ -173,9 +235,14 @@ public class ValidadorTest {
         Validador instance = new Validador();
         boolean expResult = false;
         boolean result = instance.validaFechaPrimerVencimiento(fecha);
-        assertEquals(expResult, result);
+        assertEquals("La fecha despues de 27 días desde la fecha del sistema debe ser falso",expResult, result);
     }
     
+    /**
+     * Test del método validaFechaPrimerVencimiento
+     * Valida la maxima fecha de primer vencimiento falsa
+     * Caso de prueba cp_val_fpv02
+     */ 
     @Test
     public void testValidaFechaPrimerVencimiento2() {
         System.out.println("validaFechaPrimerVencimiento2");
@@ -187,9 +254,14 @@ public class ValidadorTest {
         Validador instance = new Validador();
         boolean expResult = false;
         boolean result = instance.validaFechaPrimerVencimiento(calendar.getTime());
-        assertEquals(expResult, result);
+        assertEquals("La fecha despues de 92 días desde la fecha del sistema debe ser falso",expResult, result);
     }
     
+    /**
+     * Test del método validaFechaPrimerVencimiento
+     * Valida la minima fecha de primer vencimiento verdadera
+     * Caso de prueba cp_val_fpv03
+     */ 
     @Test
     public void testValidaFechaPrimerVencimiento3() {
         System.out.println("validaFechaPrimerVencimiento3");
@@ -201,11 +273,14 @@ public class ValidadorTest {
         Validador instance = new Validador();
         boolean expResult = true;
         boolean result = instance.validaFechaPrimerVencimiento(calendar.getTime());
-        System.out.println(fecha.toString());
-        System.out.println(calendar.getTime().toString());
-        assertEquals(expResult, result);
+        assertEquals("La fecha despues de 28 días desde la fecha del sistema debe ser verdadero",expResult, result);
     }
     
+    /**
+     * Test del método validaFechaPrimerVencimiento
+     * Valida la maxima fecha de primer vencimiento verdadera
+     * Caso de prueba cp_val_fpv04
+     */ 
     @Test
     public void testValidaFechaPrimerVencimiento4() {
         System.out.println("validaFechaPrimerVencimiento4");
@@ -217,9 +292,14 @@ public class ValidadorTest {
         Validador instance = new Validador();
         boolean expResult = true;
         boolean result = instance.validaFechaPrimerVencimiento(calendar.getTime());
-        assertEquals(expResult, result);
+        assertEquals("La fecha despues de 91 días desde la fecha del sistema debe ser verdadero",expResult, result);
     }
     
+    /**
+     * Test del método validaSeguro
+     * Valida el nombre del seguro protegido
+     * Caso de prueba cp_val_seg01
+     */ 
     @Test
     public void testValidaSeguro1() {
         System.out.println("validaSeguro1");
@@ -227,9 +307,14 @@ public class ValidadorTest {
         Validador instance = new Validador();
         boolean expResult = true;
         boolean result = instance.validaSeguro(seguro);
-        assertEquals(expResult, result);
+        assertEquals("El nombre de seguro protegido debe ser verdadero",expResult, result);
     }
     
+    /**
+     * Test del método validaSeguro
+     * Valida el nombre del seguro desgravemen
+     * Caso de prueba cp_val_seg02
+     */ 
     @Test
     public void testValidaSeguro2() {
         System.out.println("validaSeguro2");
@@ -237,9 +322,14 @@ public class ValidadorTest {
         Validador instance = new Validador();
         boolean expResult = true;
         boolean result = instance.validaSeguro(seguro);
-        assertEquals(expResult, result);
+        assertEquals("El nombre de seguro desgravemen debe ser verdadero",expResult, result);
     }
     
+    /**
+     * Test del método validaSeguro
+     * Valida el nombre del seguro no es protegido ni desgravemen
+     * Caso de prueba cp_val_seg03
+     */ 
     @Test
     public void testValidaSeguro3() {
         System.out.println("validaSeguro3");
@@ -247,9 +337,14 @@ public class ValidadorTest {
         Validador instance = new Validador();
         boolean expResult = false;
         boolean result = instance.validaSeguro(seguro);
-        assertEquals(expResult, result);
+        assertEquals("El nombre de otro seguro que no sea protegido o desgravemen debe ser falso",expResult, result);
     }
     
+    /**
+     * Test del método validaCaptcha
+     * Valida que el captcha esta en estado falso
+     * Caso de prueba cp_val_cap02
+     */ 
     @Test
     public void testValidaCaptcha1() {
         System.out.println("validaCaptcha1");
@@ -257,9 +352,14 @@ public class ValidadorTest {
         Validador instance = new Validador();
         boolean expResult = false;
         boolean result = instance.validaCaptcha(captcha);
-        assertEquals(expResult, result);
+        assertEquals("El captcha debe ser verdadero",expResult, result);
     }
     
+    /**
+     * Test del método validaCaptcha
+     * Valida que el captcha esta en estado verdadero
+     * Caso de prueba cp_val_cap01
+     */     
     @Test
     public void testValidaCaptcha2() {
         System.out.println("validaCaptcha2");
@@ -267,7 +367,7 @@ public class ValidadorTest {
         Validador instance = new Validador();
         boolean expResult = true;
         boolean result = instance.validaCaptcha(captcha);
-        assertEquals(expResult, result);
+        assertEquals("El captcha debe ser falso",expResult, result);
     }
     
 }

@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="col-lg-12">                    
                     <div class="alert alert-primary" role="alert">
-                        <h1>Simulador de credito</h1>
+                        <h1>Simulador de crédito</h1>
                         <hr>
                             <form action="simulador.htm" method="post">
                             <div class="form-group">

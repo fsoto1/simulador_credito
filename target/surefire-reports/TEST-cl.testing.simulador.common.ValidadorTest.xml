@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="21" failures="0" name="cl.testing.simulador.common.ValidadorTest" time="0.139" errors="0" skipped="0">
+<testsuite tests="21" failures="0" name="cl.testing.simulador.common.ValidadorTest" time="0.097" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\bin"/>
@@ -14,6 +14,7 @@
     <property name="user.country" value="419"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
+    <property name="test" value="cl.testing.simulador.common.ValidadorTest"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="C:\Users\Franco\Documents\NetBeansProjects\Simulador"/>
     <property name="java.runtime.version" value="1.8.0_131-b11"/>
@@ -44,7 +45,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_131\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 clean install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=cl.testing.simulador.common.ValidadorTest -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="es"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -61,25 +62,25 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="cl.testing.simulador.common.ValidadorTest" name="testValidaRut1" time="0.003"/>
+  <testcase classname="cl.testing.simulador.common.ValidadorTest" name="testValidaRut1" time="0.004"/>
   <testcase classname="cl.testing.simulador.common.ValidadorTest" name="testValidaRut2" time="0"/>
   <testcase classname="cl.testing.simulador.common.ValidadorTest" name="testValidaRut3" time="0"/>
   <testcase classname="cl.testing.simulador.common.ValidadorTest" name="testValidaRut4" time="0"/>
-  <testcase classname="cl.testing.simulador.common.ValidadorTest" name="testValidaFechaPrimerVencimiento1" time="0"/>
-  <testcase classname="cl.testing.simulador.common.ValidadorTest" name="testValidaFechaPrimerVencimiento2" time="0"/>
+  <testcase classname="cl.testing.simulador.common.ValidadorTest" name="testValidaFechaPrimerVencimiento1" time="0.007"/>
+  <testcase classname="cl.testing.simulador.common.ValidadorTest" name="testValidaFechaPrimerVencimiento2" time="0.001"/>
   <testcase classname="cl.testing.simulador.common.ValidadorTest" name="testValidaFechaPrimerVencimiento3" time="0"/>
   <testcase classname="cl.testing.simulador.common.ValidadorTest" name="testValidaFechaPrimerVencimiento4" time="0"/>
   <testcase classname="cl.testing.simulador.common.ValidadorTest" name="testValidaCaptcha1" time="0"/>
   <testcase classname="cl.testing.simulador.common.ValidadorTest" name="testValidaCaptcha2" time="0"/>
   <testcase classname="cl.testing.simulador.common.ValidadorTest" name="testValidaCuota1" time="0"/>
   <testcase classname="cl.testing.simulador.common.ValidadorTest" name="testValidaCuota2" time="0"/>
-  <testcase classname="cl.testing.simulador.common.ValidadorTest" name="testValidaCuota3" time="0"/>
-  <testcase classname="cl.testing.simulador.common.ValidadorTest" name="testValidaCuota4" time="0.001"/>
+  <testcase classname="cl.testing.simulador.common.ValidadorTest" name="testValidaCuota3" time="0.001"/>
+  <testcase classname="cl.testing.simulador.common.ValidadorTest" name="testValidaCuota4" time="0"/>
   <testcase classname="cl.testing.simulador.common.ValidadorTest" name="testValidaMonto1" time="0"/>
-  <testcase classname="cl.testing.simulador.common.ValidadorTest" name="testValidaMonto2" time="0.002"/>
+  <testcase classname="cl.testing.simulador.common.ValidadorTest" name="testValidaMonto2" time="0"/>
   <testcase classname="cl.testing.simulador.common.ValidadorTest" name="testValidaMonto3" time="0"/>
   <testcase classname="cl.testing.simulador.common.ValidadorTest" name="testValidaMonto4" time="0"/>
-  <testcase classname="cl.testing.simulador.common.ValidadorTest" name="testValidaSeguro1" time="0.001"/>
+  <testcase classname="cl.testing.simulador.common.ValidadorTest" name="testValidaSeguro1" time="0"/>
   <testcase classname="cl.testing.simulador.common.ValidadorTest" name="testValidaSeguro2" time="0"/>
-  <testcase classname="cl.testing.simulador.common.ValidadorTest" name="testValidaSeguro3" time="0"/>
+  <testcase classname="cl.testing.simulador.common.ValidadorTest" name="testValidaSeguro3" time="0.001"/>
 </testsuite>
