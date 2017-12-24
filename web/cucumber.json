@@ -1,0 +1,346 @@
+[
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "#----------------------------------"
+      },
+      {
+        "line": 2,
+        "value": "# Empty Cucumber .feature file"
+      },
+      {
+        "line": 3,
+        "value": "#----------------------------------"
+      }
+    ],
+    "line": 4,
+    "elements": [
+      {
+        "line": 19,
+        "name": "",
+        "description": "",
+        "id": "simulador;;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 4691898639,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Yo ingreso al simulador",
+            "match": {
+              "location": "Step_simulador.yo_ingreso_al_simulador()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1105402605,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Yo ingreso un rut \"1-9\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1-9",
+                  "offset": 19
+                }
+              ],
+              "location": "Step_simulador.yo_ingreso_un_rut(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 95992181,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Yo ingreso un monto \"2222222\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2222222",
+                  "offset": 21
+                }
+              ],
+              "location": "Step_simulador.yo_ingreso_un_monto_valido(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 76441669,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Yo ingreso un plazo \"12\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "12",
+                  "offset": 21
+                }
+              ],
+              "location": "Step_simulador.yo_ingreso_un_plazo_valido(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 90014155,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Yo ingreso una fecha valida \"30-12-2017\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "30-12-2017",
+                  "offset": 29
+                }
+              ],
+              "location": "Step_simulador.yo_ingreso_una_fecha_valida(String)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 90796479,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Yo selecciono un seguro \"protegido\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "protegido",
+                  "offset": 25
+                }
+              ],
+              "location": "Step_simulador.yo_selecciono_un_seguro(String)"
+            },
+            "matchedColumns": [
+              4
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5121152960,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Yo oprimo el botón simular",
+            "match": {
+              "location": "Step_simulador.yo_oprimo_el_botón_simular()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 106885335,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Simulo correctamente 197691",
+            "match": {
+              "arguments": [
+                {
+                  "val": "197691",
+                  "offset": 21
+                }
+              ],
+              "location": "Step_simulador.simulo_correctamente(int)"
+            },
+            "matchedColumns": [
+              5
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 20,
+        "name": "",
+        "description": "",
+        "id": "simulador;;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3736868852,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Yo ingreso al simulador",
+            "match": {
+              "location": "Step_simulador.yo_ingreso_al_simulador()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1093103957,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Yo ingreso un rut \"2-7\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2-7",
+                  "offset": 19
+                }
+              ],
+              "location": "Step_simulador.yo_ingreso_un_rut(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 107726173,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Yo ingreso un monto \"1111111\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1111111",
+                  "offset": 21
+                }
+              ],
+              "location": "Step_simulador.yo_ingreso_un_monto_valido(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 73507512,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Yo ingreso un plazo \"24\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24",
+                  "offset": 21
+                }
+              ],
+              "location": "Step_simulador.yo_ingreso_un_plazo_valido(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 94096638,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Yo ingreso una fecha valida \"24-12-2017\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "24-12-2017",
+                  "offset": 29
+                }
+              ],
+              "location": "Step_simulador.yo_ingreso_una_fecha_valida(String)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 95728577,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Yo selecciono un seguro \"ninguno\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ninguno",
+                  "offset": 25
+                }
+              ],
+              "location": "Step_simulador.yo_selecciono_un_seguro(String)"
+            },
+            "matchedColumns": [
+              4
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5137581195,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Yo oprimo el botón simular",
+            "match": {
+              "location": "Step_simulador.yo_oprimo_el_botón_simular()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 98564723,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Simulo correctamente 52428",
+            "match": {
+              "arguments": [
+                {
+                  "val": "52428",
+                  "offset": 21
+                }
+              ],
+              "location": "Step_simulador.simulo_correctamente(int)"
+            },
+            "matchedColumns": [
+              5
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Simulador",
+    "description": "",
+    "id": "simulador",
+    "keyword": "Feature",
+    "uri": "src/test/java/cl/testing/simulador/cucumber/features/simulador.feature"
+  }
+]

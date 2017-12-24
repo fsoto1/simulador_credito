@@ -5,9 +5,9 @@ Simulador de crédito de consumo para la asignatura Testing y Calidad de Softwar
 
 ## Caracterísitcas
 
-
   - Tecnología: Java web
   - Framework: Spring MVC
   - Práctica: Desarrollo guíado por pruebas (TDD)
-  - Test unitario: JUnit
-  - Mutation Testing: Pitest
+  - Test unitario: JUnit, Hamcrest y Pitest
+  - Test funcional: Cucumber, Gherkin y Selenium
+

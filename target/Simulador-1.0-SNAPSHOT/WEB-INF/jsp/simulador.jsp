@@ -43,21 +43,21 @@
                             <label>Seguros que deseas incluir</label>
                             <div class="form-check form-check-inline">                                
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="seguro" id="inlineRadio1" value="protegido" checked="true"> Protegido
+                                    <input class="form-check-input" type="radio" name="seguro" id="protegido"  value="protegido" checked="true"> Protegido
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label class="form-check-label">
-                                  <input class="form-check-input" type="radio" name="seguro" id="inlineRadio2" value="desgravemen"> Desgravamen
+                                    <input class="form-check-input" type="radio" name="seguro" id="desgravemen"  value="desgravemen"> Desgravamen
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label class="form-check-label">
-                                  <input class="form-check-input" type="radio" name="seguro" id="inlineRadio3" value="ninguno"> Ninguno
+                                    <input class="form-check-input" type="radio" name="seguro" id="ninguno" value="ninguno"> Ninguno
                                 </label>
                             </div>
                             <br>
-                            <button type="submit" class="btn btn-success">Simular</button>
+                            <button type="submit" class="btn btn-success" id="simular">Simular</button>
                         </form> 
                     </div>  
             </div>

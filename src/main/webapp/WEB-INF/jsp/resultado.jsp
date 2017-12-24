@@ -43,7 +43,7 @@
                               </tr>
                               <tr>
                                  <th>Valor Cuota Mensual</th>
-                                 <th>$ ${requestScope.valorCuota}</th>
+                                 <th>$ <span id="cuota">${requestScope.valorCuota}</span></th>
                               </tr>
                               <tr>
                                  <th>Tasa de Interés Mensual(*)</th>

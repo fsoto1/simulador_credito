@@ -2,3 +2,5 @@
 # Build y reportes#
 # =============== #
 target/
+/bin/nbproject/
+/bin/
